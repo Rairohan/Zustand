@@ -1,5 +1,5 @@
-import CounterButtons from "./component/CounterButtons";
-import CounterDisplay from "./component/CounterDisplay";
+import CounterButtons from "./component/Counter/CounterButtons";
+import CounterDisplay from "./component/Counter/CounterDisplay";
 
 export default function App(){
   return(
