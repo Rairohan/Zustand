@@ -1,11 +1,11 @@
-import CounterButtons from "./component/Counter/CounterButtons";
-import CounterDisplay from "./component/Counter/CounterDisplay";
+import CartList from "./component/Cart/CartList";
+import CartCount from "./component/Cart/CartCount";
 
 export default function App(){
   return(
     <div>
-        <CounterDisplay/>
-        <CounterButtons/>
+        <CartList/>
+        <CartCount/>
     </div>
   )
 }

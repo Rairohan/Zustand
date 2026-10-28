@@ -1,4 +1,4 @@
-import {useCart} from "../../store/cartStore";
+import {useCart} from "../../store/useCart";
 export default function CartCounter(){
     const count = useCart((state)=>state.items.length)
     console.log("cart rendered")
