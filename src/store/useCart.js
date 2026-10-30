@@ -15,7 +15,7 @@ export const useCart = create((set) => ({
         }
       }
 
-      return { items: [...state.items, item] }
+      return { items: [...state.items, {...item,qty:1}] }
     }),
 
   removeItem: (id) =>

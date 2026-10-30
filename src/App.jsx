@@ -5,9 +5,9 @@ import ProductList from "./component/Cart/ProductList";
 export default function App(){
   return(
     <div>
-        <CartList/>
         <CartCount/>
         <ProductList/>
+        <CartList/>
     </div>
   )
 }
