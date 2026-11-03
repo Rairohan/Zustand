@@ -3,7 +3,11 @@ import { useCart } from "../../store/useCart";
 export default function CartList() {
   const items = useCart((state) => state.items);
   const removeItem = useCart((state) => state.removeItem);
-  const clearCart = useCart((state)=> state.clearCart)
+  const clearCart = useCart((state) => state.clearCart);
+
+  const total = items.reduce((runningTotal, item) => {
+    return runningTotal + item.price * item.qty;
+  }, 0);
 
   console.log("CartList rendered");
 
@@ -20,8 +24,9 @@ export default function CartList() {
             <button onClick={() => removeItem(item.id)}>Remove</button>
           </li>
         ))}
-        <button onClick={()=>{clearCart(products)}}>Clear</button>
       </ol>
+      <h3>Total: {total}</h3>
+      <button onClick={clearCart}>Clear</button>
     </div>
   );
 }
